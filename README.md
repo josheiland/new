@@ -1,1 +1,2 @@
-## Based on free Material React Dashboard (https://devias.io/products/material-react-dashboard) 
+## Based on a free Material React Dashboard Template: 
+(https://devias.io/products/material-react-dashboard) 
