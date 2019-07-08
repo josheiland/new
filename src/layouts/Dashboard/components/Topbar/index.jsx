@@ -21,7 +21,9 @@ import {
 // Material icons
 import {
   NotificationsOutlined as NotificationsIcon,
-  Input as InputIcon
+  Input as InputIcon,
+  Menu as MenuIcon,
+  Close as CloseIcon,
 } from '@material-ui/icons';
 
 // Component styles
@@ -33,6 +35,8 @@ function Topbar(props) {
     classes,
     className,
     title,
+    isSidebarOpen,
+    onToggleSidebar
   } = props;
 
   const rootClassName = classNames(classes.root, className);
@@ -41,6 +45,13 @@ function Topbar(props) {
     <Fragment>
       <div className={rootClassName}>
         <Toolbar className={classes.toolbar}>
+          <IconButton
+            className={classes.menuButton}
+            onClick={onToggleSidebar}
+            variant="text"
+          >
+            {isSidebarOpen ? <CloseIcon /> : <MenuIcon />}
+          </IconButton>
           <Typography
             className={classes.title}
             variant="h4"

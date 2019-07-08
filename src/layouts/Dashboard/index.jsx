@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 
 // Externals
 import classNames from 'classnames';
@@ -18,10 +18,14 @@ import styles from './styles';
 
 function Dashboard(props) {
 
-  const isOpen = true;
+  const [isOpen, setOpen] = useState(true);
   const { classes, title, children } = props;
   const shiftTopbar = isOpen;
   const shiftContent = isOpen;
+
+  const handleToggleOpen = () => {
+    setOpen(!isOpen)
+  }
 
   return (
     <Fragment>
@@ -30,6 +34,7 @@ function Dashboard(props) {
           [classes.topbarShift]: shiftTopbar
         })}
         isSidebarOpen={isOpen}
+        onToggleSidebar={handleToggleOpen}
         title={title}
       />
       <Drawer
