@@ -4,13 +4,7 @@ import { createBrowserHistory } from 'history';
 
 // Material helpers
 import { ThemeProvider } from '@material-ui/styles';
-
-// Theme
 import theme from './theme';
-
-// Styles
-import 'react-perfect-scrollbar/dist/css/styles.css';
-import './assets/scss/index.scss';
 
 // Routes
 import Routes from './Routes';

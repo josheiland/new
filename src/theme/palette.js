@@ -8,13 +8,11 @@ export default {
     muted: '#9EA0A4'
   },
   primary: {
-    contrastText: white,
     main: '#0767DB',
     light: '#F6F9FD',
     dark: '#0B48A0'
   },
   secondary: {
-    contrastText: white,
     main: '#7d58ff',
     light: '',
     dark: '#37248F'

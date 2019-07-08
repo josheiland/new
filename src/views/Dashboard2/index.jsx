@@ -1,12 +1,7 @@
 import React from 'react';
 
-// Externals
-import PropTypes from 'prop-types';
-
 // Material helpers
 import { withStyles } from '@material-ui/core';
-
-// Shared layouts
 import { Dashboard as DashboardLayout } from 'layouts';
 
 // Component styles
@@ -31,9 +26,5 @@ function Dashboard (props) {
     </DashboardLayout>
   );
 }
-
-Dashboard.propTypes = {
-  classes: PropTypes.object.isRequired
-};
 
 export default withStyles(styles)(Dashboard);
