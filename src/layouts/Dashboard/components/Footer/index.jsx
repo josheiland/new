@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Externals
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 // Material helpers
@@ -21,32 +20,25 @@ const styles = theme => ({
   }
 });
 
-class Footer extends Component {
-  render() {
-    const { classes, className } = this.props;
+function Footer(props) {
+  const { classes, className } = props;
 
-    const rootClassName = classNames(classes.root, className);
+  const rootClassName = classNames(classes.root, className);
 
-    return (
-      <div className={rootClassName}>
-        <Divider />
-        <Typography
-          className={classes.company}
-          variant="body1"
-        >
-          &copy; Vitrix Software 2019 by Josh Eiland
+  return (
+    <div className={rootClassName}>
+      <Divider />
+      <Typography
+        className={classes.company}
+        variant="body1"
+      >
+        &copy; Vitrix Software 2019 by Josh Eiland
         </Typography>
-        <Typography variant="caption">
-          To be filled with buttons.
+      <Typography variant="caption">
+        To be filled with buttons.
         </Typography>
-      </div>
-    );
-  }
+    </div>
+  );
 }
-
-Footer.propTypes = {
-  className: PropTypes.string,
-  classes: PropTypes.object.isRequired
-};
 
 export default withStyles(styles)(Footer);

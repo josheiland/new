@@ -1,4 +1,4 @@
-import { white, black, background, highlight, text } from '../common/colors';
+import { white, black, background, highlight } from '../common/colors';
 
 export default {
   common: {
@@ -19,30 +19,6 @@ export default {
     light: '',
     dark: '#37248F'
   },
-  success: {
-    contrastText: white,
-    main: '#45B880',
-    light: '#F1FAF5',
-    dark: '#00783E'
-  },
-  info: {
-    contrastText: white,
-    main: '#1070CA',
-    light: '#F1FBFC',
-    dark: '#007489'
-  },
-  warning: {
-    contrastText: white,
-    main: '#FFB822',
-    light: '#FDF8F3',
-    dark: '#95591E'
-  },
-  danger: {
-    contrastText: white,
-    main: '#ED4740',
-    light: '#FEF6F6',
-    dark: '#BF0E08'
-  },
   text: {
     primary: highlight,
     secondary: '#66788A',
@@ -51,7 +27,6 @@ export default {
   background: {
     default: background,
     dark: '#172B4D',
-    paper: white
   },
   border: background,
   divider: background

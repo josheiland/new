@@ -1,4 +1,4 @@
-import { white, black, background, highlight, text, selected } from 'C:/Users/josheiland/Desktop/Vitrix/day12/new/src/common/colors';
+import { background, selected } from 'C:/Users/josheiland/Desktop/Vitrix/day12/new/src/common/colors';
 
 export default theme => ({
   root: {

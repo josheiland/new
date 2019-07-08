@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 
 // Externals
@@ -24,66 +24,59 @@ import {
   Input as InputIcon
 } from '@material-ui/icons';
 
-// Custom components
-import { NotificationList } from './components';
-
 // Component styles
 import styles from './styles';
 
-class Topbar extends Component {
-  signal = true;
+function Topbar(props) {
 
+  const {
+    classes,
+    className,
+    title,
+  } = props;
 
-  render() {
-    const {
-      classes,
-      className,
-      title,
-    } = this.props;
+  const rootClassName = classNames(classes.root, className);
 
-    const rootClassName = classNames(classes.root, className);
-
-    return (
-      <Fragment>
-        <div className={rootClassName}>
-          <Toolbar className={classes.toolbar}>
-            <Typography
-              className={classes.title}
-              variant="h4"
+  return (
+    <Fragment>
+      <div className={rootClassName}>
+        <Toolbar className={classes.toolbar}>
+          <Typography
+            className={classes.title}
+            variant="h4"
+          >
+            {title}
+          </Typography>
+          <IconButton
+            className={classes.notificationsButton}
+          >
+            <Badge
+              color="primary"
+              variant="dot"
             >
-              {title}
-            </Typography>
-            <IconButton
-              className={classes.notificationsButton}
-            >
-              <Badge
-                color="primary"
-                variant="dot"
-              >
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              className={classes.signOutButton}
-            >
-              <InputIcon />
-            </IconButton>
-          </Toolbar>
-        </div>
-        <Popover
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'center'
-          }}
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'center'
-          }}
-        >
-        </Popover>
-      </Fragment>
-    );
-  }
+              <NotificationsIcon />
+            </Badge>
+          </IconButton>
+          <IconButton
+            className={classes.signOutButton}
+          >
+            <InputIcon />
+          </IconButton>
+        </Toolbar>
+      </div>
+      <Popover
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center'
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'center'
+        }}
+      >
+      </Popover>
+    </Fragment>
+  );
 }
 
 Topbar.propTypes = {
@@ -96,7 +89,7 @@ Topbar.propTypes = {
 };
 
 Topbar.defaultProps = {
-  onToggleSidebar: () => {}
+  onToggleSidebar: () => { }
 };
 
 export default compose(

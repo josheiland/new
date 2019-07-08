@@ -9,15 +9,11 @@ import { withStyles } from '@material-ui/core';
 // Shared layouts
 import { Dashboard as DashboardLayout } from 'layouts';
 
-// Custom components
-import {
-  SalesChart,
-} from './components';
-
 // Component styles
 const styles = theme => ({
   root: {
-    padding: theme.spacing.unit * 4
+    padding: theme.spacing.unit * 4,
+    backgroundColor: '#b07104'
   },
   item: {
     height: '100%'
@@ -28,9 +24,8 @@ function Dashboard (props) {
   const { classes } = props;
 
   return (
-    <DashboardLayout title="Dashboard">
+    <DashboardLayout title="Detecke - Indikace">
       <div className={classes.root}>
-          <SalesChart className={classes.item} />
       </div>
     </DashboardLayout>
   );
