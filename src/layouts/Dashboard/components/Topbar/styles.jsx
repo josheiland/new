@@ -1,4 +1,4 @@
-import { background } from 'C:/Users/josheiland/Desktop/Vitrix/day12/new/src/common/colors';
+import { background } from '../../../../../src/common/colors';
 
 export default theme => ({
   root: {
