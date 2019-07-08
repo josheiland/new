@@ -12,7 +12,8 @@ import { Divider, Typography } from '@material-ui/core';
 // Component styles
 const styles = theme => ({
   root: {
-    padding: theme.spacing.unit * 4
+    padding: theme.spacing.unit * 1,
+    marginLeft: theme.spacing.unit * 4
   },
   company: {
     marginTop: theme.spacing.unit * 2,
