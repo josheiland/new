@@ -23,7 +23,7 @@ function Dashboard(props) {
   const shiftTopbar = isOpen;
   const shiftContent = isOpen;
 
-  const handleToggleOpen = () => {
+  const handleToggle = () => {
     setOpen(!isOpen)
   }
 
@@ -34,12 +34,13 @@ function Dashboard(props) {
           [classes.topbarShift]: shiftTopbar
         })}
         isSidebarOpen={isOpen}
-        onToggleSidebar={handleToggleOpen}
+        onToggleSidebar={handleToggle}
         title={title}
       />
       <Drawer
         anchor="left"
         classes={{ paper: classes.drawerPaper }}
+        onClose={handleToggle}
         open={isOpen}
         variant={'persistent'}
       >

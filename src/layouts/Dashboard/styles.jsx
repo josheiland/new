@@ -16,7 +16,6 @@ export default theme => ({
   },
   drawerPaper: {
     zIndex: 2,
-    width: '240px'
   },
   sidebar: {
     width: '240px'

@@ -7,11 +7,11 @@ import { Dashboard as DashboardLayout } from 'layouts';
 // Component styles
 const styles = theme => ({
   root: {
-    padding: theme.spacing.unit * 4,
-    backgroundColor: '#abcf42'
+    padding: theme.spacing(4),
+    backgroundColor: '#abcf42',
   },
   item: {
-    height: '100%'
+    height: '100%',
   }
 });
 

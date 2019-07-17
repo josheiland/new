@@ -5,19 +5,17 @@ import classNames from 'classnames';
 
 // Material helpers
 import { withStyles } from '@material-ui/core';
-
-// Material components
 import { Divider, Typography } from '@material-ui/core';
 
 // Component styles
 const styles = theme => ({
   root: {
-    padding: theme.spacing.unit * 1,
-    marginLeft: theme.spacing.unit * 4
+    padding: theme.spacing(1),
+    marginLeft: theme.spacing(4)
   },
   company: {
-    marginTop: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit * 0.5
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(0.5)
   }
 });
 
@@ -33,10 +31,9 @@ function Footer(props) {
         className={classes.company}
         variant="body1"
       >
-        &copy; Vitrix Software 2019 by Josh Eiland
-        </Typography>
+      </Typography>
       <Typography variant="caption">
-        To be filled with buttons.
+        To be filled with Widgets.
         </Typography>
     </div>
   );

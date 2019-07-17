@@ -7,22 +7,22 @@ export default theme => ({
     display: 'flex',
     alignItems: 'center',
     height: '64px',
-    zIndex: theme.zIndex.appBar
+    zIndex: theme.zIndex.appBar,
   },
   toolbar: {
     minHeight: 'auto',
-    width: '100%'
+    width: '100%',
   },
   title: {
-    marginLeft: theme.spacing.unit
+    marginLeft: theme.spacing(1),
   },
   menuButton: {
-    marginLeft: '-4px'
+    marginLeft: '-4px',
   },
   notificationsButton: {
-    marginLeft: 'auto'
+    marginLeft: 'auto',
   },
   signOutButton: {
-    marginLeft: theme.spacing.unit
+    marginLeft: theme.spacing(1),
   }
 });
